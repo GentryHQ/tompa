@@ -1,0 +1,33 @@
+@use './variables' as v;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: v.$ff;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.7;
+    font-size: 1.125rem;
+}
+
+img {
+    display: block;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    max-inline-size: 90rem;
+    padding-inline: 1.25rem;
+    margin-inline: auto;
+}

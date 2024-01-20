@@ -1,0 +1,17 @@
+@use './variables' as v;
+
+.process {
+    padding-block-start: 3.125rem;
+    display: flex;
+    text-align: center;
+
+    h2 {
+        color: v.$TomatoRed;
+        font-size: 3rem;
+        font-weight: v.$fw-700;
+    }
+
+    p {
+        max-inline-size: 37.5rem;
+    }
+}

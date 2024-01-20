@@ -1,0 +1,31 @@
+@use './variables' as v;
+
+.impact {
+    margin-block-start: -50px;
+    position: relative;
+    color: v.$White;
+    display: flex;
+    // justify-content: center;
+
+
+    &_wrapper {
+        background: linear-gradient(90deg, #A60202 12.91%, #820101 96.39%);
+        box-shadow: 0px 4px 30px 5px rgba(0, 0, 0, 0.15);
+        display: inline-flex;
+        gap: 40px;
+        padding: 1.75rem 3.75rem;
+        border-radius: 0.5rem;
+        margin-inline: auto;
+
+
+        h4 {
+            font-size: 1.875rem;
+            font-weight: v.$fw-800;
+        }
+
+        .divider {
+            width: 4px;
+            background-color: v.$White;
+        }
+    }
+}
