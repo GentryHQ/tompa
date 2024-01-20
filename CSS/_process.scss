@@ -11,7 +11,25 @@
         font-weight: v.$fw-700;
     }
 
-    p {
+    &_p {
         max-inline-size: 37.5rem;
+        margin-inline: auto;
+        padding-inline-start: 1.5rem;
+    }
+
+    &_card {
+        display: flex;
+        align-items: center;
+        gap: 64px;
+        text-align: left;
+        max-inline-size: 1044px;
+    }
+}
+
+.arrow {
+    margin-block: -40px -60px;
+
+    img {
+        margin-inline: auto;
     }
 }
