@@ -1,0 +1,61 @@
+@use './variables' as v;
+
+.contact_wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact_container {
+    border: 1px v.$TomatoRed solid;
+    border-radius: 30px;
+    padding: 40px 80px;
+    display: flex;
+    gap: 2.5rem;
+    margin-block-start: 3rem;
+    // justify-content: center;
+    // align-items: center;
+
+    img {
+        width: 450px;
+    }
+
+    form {
+        flex-basis: 50%;
+
+        label {
+            display: block;
+            padding-block: 24px 10px;
+        }
+
+        input, textarea {
+            border-radius: 0.5rem;
+            padding: 16px;
+            outline: none;
+            border: 1px solid rgba(0, 0, 0, 0.13);
+            width: 100%;
+            
+            &:focus-within {
+                border: 1px solid v.$TomatoRed;
+            }
+        }
+
+        textarea {
+            height: 9.375rem;
+            resize: none;
+        }
+
+        button {
+            display: block;
+            cursor: pointer;
+            background-color: v.$TomatoRed;
+            color: v.$White;
+            padding: 1rem;
+            border-radius: 8px;
+            user-select: none;
+            border: none;
+            margin-block-start: 0.625rem;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+@use './variables' as v;
+
+.partners {
+    margin-block: 5rem;
+    text-align: center;
+
+    .partners_wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2.5rem;
+        box-shadow: 2px 3px 20px 5px rgba(44, 43, 43, 0.06);
+        width: min-content;
+        margin-inline: auto;
+        padding: 20px 40px;
+        border-radius: 20px;
+        margin-block-start: 32px;
+    }
+}
