@@ -1,15 +1,11 @@
 @use './variables' as v;
+@use './breakpoint' as b;
 
 .process {
     padding-block-start: 80px;
     display: flex;
     text-align: center;
 
-    h2 {
-        color: v.$TomatoRed;
-        font-size: 3rem;
-        font-weight: v.$fw-700;
-    }
 
     &_p {
         max-inline-size: 37.5rem;
@@ -23,11 +19,26 @@
         gap: 64px;
         text-align: left;
         max-inline-size: 1044px;
+
+        @include b.breakpoint-sm {
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+}
+
+.second {
+    @include b.breakpoint-sm {
+        flex-direction: column-reverse;
     }
 }
 
 .arrow {
     margin-block: -40px -60px;
+
+    @include b.breakpoint-sm {
+        display: none;
+    }
 
     img {
         margin-inline: auto;

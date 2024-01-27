@@ -1,9 +1,16 @@
+@use './breakpoint' as b;
+
 .why_wrapper {
     margin-block-start: 5rem;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 5rem;
+
+    @include b.breakpoint-sm {
+        flex-direction: column;
+        text-align: center;
+    }
 
     .text {
         flex-basis: 50%;
