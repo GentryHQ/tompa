@@ -48,13 +48,10 @@
 
         button {
             display: block;
-            cursor: pointer;
             background-color: v.$TomatoRed;
             color: v.$White;
             padding: 1rem;
-            border-radius: 8px;
             user-select: none;
-            border: none;
             margin-block-start: 0.625rem;
         }
     }

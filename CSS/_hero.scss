@@ -27,6 +27,64 @@ nav {
     align-items: center;
     padding-block: 1.25rem;
 
+    .menuToggle {
+        background-color: v.$TomatoRed;
+        padding: .5rem;
+        transition: all 1s ease;
+        position: relative;
+        z-index: 5;
+    
+        span.one {
+          transform: rotate(0deg);
+          transition: all 1s ease;
+        }
+    
+        span.three {
+          transform: rotate(0deg);
+          transition: all 1s ease;
+        }
+    
+        &.active {
+          background-color: v.$TomatoBg;
+          transition: all 1s ease;
+          position: fixed;
+          right: 20px;
+    
+          span.one {
+            transform: rotate(218deg); 
+            transition: all 1s ease;
+            transform-origin: 55% 150%;
+          }
+      
+          span.three {
+            transform: rotate(132deg);
+            transform-origin: 60% -70%;
+            transition: all 1s ease;
+          }
+    
+          span.two {
+            visibility: hidden;
+          }
+        }
+    
+        @include b.breakpoint-md {
+          display: none;
+        }
+    
+        span {
+          inline-size: 2.1875rem;
+          block-size: 3px;
+          background-color: v.$White;
+          display: block;
+          margin-block: 5px;
+        }
+    
+        span.two {
+          inline-size: 27px;
+        }        
+    }
+
+
 
 
     .nav_links {
@@ -43,6 +101,28 @@ nav {
                 color: v.$Yellow;
             }
         }
+
+        @include b.breakpoint-sm {
+            background-color: v.$White;
+            box-shadow: -15px -2px 20px 0px #0000002e;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 50px;
+            gap: 1.25rem;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            right: 1000px;
+            left: -1000px;
+            transition: all 0.5s ease;
+      
+            &.active {
+              right: 0;
+              left: 0;
+            }
+          }
     }
 
     .cta {
@@ -52,6 +132,9 @@ nav {
         padding: 10px 16px;
         border-radius: 8px;
         transition: all 0.5s ease-in;
+        display: inline-block;
+        text-align: right;
+        margin-inline: 0.5rem;
 
         &:hover {
             background-color: v.$White;
