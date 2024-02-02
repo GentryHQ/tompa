@@ -1,5 +1,13 @@
 @use './variables' as v;
 
+.product {
+    .container {
+        max-width: 768px;
+        width: 100%;
+        overflow-x: auto;
+    }
+}
+
 .products_wrapper {
     text-align: center;
     padding-block-start: 80px;
@@ -20,6 +28,9 @@
     align-items: center;
     gap: 100px;
     margin-top: 3rem;
+    max-width: 768px;
+    width: 100%;
+    overflow-x: auto;
 
     .divider {
         background-color: v.$White;
