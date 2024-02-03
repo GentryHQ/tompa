@@ -20,6 +20,7 @@
     flex-direction: column;
     gap: 2.5rem;
     margin-block-start: 3rem;
+    overflow-x: hidden;
 
 
     @include b.breakpoint-md {
@@ -28,12 +29,16 @@
     }
 
     img {
-        max-width: 380px;
+        max-width: 450px;
         width: 100%;
+
+        @include b.breakpoint-md {
+
+        }
     }
 
     form {
-        flex-basis: 50%;
+        min-width: 300px;
 
         label {
             display: block;
