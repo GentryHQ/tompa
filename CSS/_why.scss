@@ -25,6 +25,10 @@
         margin-left: 35px;
         padding-block-end: 10px;
         font-size: 20px;
+
+        @include b.breakpoint-sm {
+            font-size: 1rem;
+        }
     }
 
     li:before {

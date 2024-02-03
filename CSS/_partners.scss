@@ -15,5 +15,12 @@
         padding: 20px 40px;
         border-radius: 20px;
         margin-block-start: 32px;
+
+        max-width: 768px;
+        // width: 100%;
+        overflow-x: auto;
+        // scroll-snap-type: x;
+        // cursor: grab;
+        // scroll-behavior: smooth;
     }
 }
