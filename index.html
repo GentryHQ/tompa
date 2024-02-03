@@ -2,7 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PUP Industries" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/site.webmanifest">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -10,17 +16,17 @@
     <title>Tompa</title>
 </head>
 <body>
-    <header>
+    <header id="hero">
         <div class="container">
             <nav class="nav">
-                <a href="#" class="logo"><img src="./Assests/Tompa-Logo.png" alt="Link to Tompa Home Page"></a>
+                <a href="./index.html" class="logo"><img src="./Assests/Tompa-Logo.png" alt="Link to Tompa Home Page"></a>
                 <ul class="nav_links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Our Process</a></li>
-                    <li><a href="#">Our Product</a></li>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#process">Our Process</a></li>
+                    <li><a href="#product">Our Product</a></li>
                 </ul>
 
-                <a href="#" class="cta">Contact Us</a>
+                <a href="#contact" class="cta">Contact Us</a>
 
                 <button class="menuToggle">
                     <span class="one"></span>
@@ -68,7 +74,7 @@
         </div>
     </section>
 
-    <section class="process">
+    <section class="process" id="process">
         <div class="container">
             <div class="process_wrapper">
                 <h2>Our Production Process</h2>
@@ -111,7 +117,7 @@
         </div>
     </section>
 
-    <section class="products">
+    <section class="products" id="product">
         <div class="container">
             <div class="products_wrapper">
                 <h2>Our Products</h2>
@@ -189,7 +195,7 @@
         </div>
     </section>
 
-    <section class="contact">
+    <section class="contact" id="contact">
         <div class="container">
             <div class="contact_wrapper">
                 <h2>Contact us</h2>
@@ -226,13 +232,13 @@
 
             <ul class="footer_links">
                 <li>
-                    <a href="#">Home</a>
+                    <a href="#hero">Home</a>
                 </li>
                 <li>
-                    <a href="#">Our Process</a>
+                    <a href="#process">Our Process</a>
                 </li>
                 <li>
-                    <a href="#">Our Products</a>
+                    <a href="#product">Our Products</a>
                 </li>
             </ul>
 

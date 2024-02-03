@@ -3,14 +3,22 @@ const menu = document.querySelector('.nav_links');
 
 
 menuToggle.addEventListener('click', ()=>{
-    console.log('works');
     menuToggle.classList.toggle('active');
     menu.classList.toggle('active');
 })
 
+// Link Click - Close
+const links = menu.getElementsByTagName('a');
+
+for (let i = 0; i < links.length; i++) {
+    links[i].addEventListener("click", () => {
+        menuToggle.classList.remove('active');
+        menu.classList.remove('active');
+    })
+};
+
 //Slider
 const wrapper = document.querySelector('.products_card');
-console.log(wrapper);
 
 let pressed = false;
 let startX = 0;
