@@ -1,4 +1,5 @@
 @use './variables' as v;
+@use './breakpoint' as b;
 
 .partners {
     margin-block: 5rem;
@@ -7,7 +8,7 @@
     .partners_wrapper {
         display: flex;
         align-items: center;
-        justify-content: center;
+        // justify-content: center;
         gap: 2.5rem;
         box-shadow: 2px 3px 20px 5px rgba(44, 43, 43, 0.06);
         width: min-content;
@@ -17,10 +18,9 @@
         margin-block-start: 32px;
 
         max-width: 768px;
-        // width: 100%;
+        width: 100%;
         overflow-x: auto;
-        // scroll-snap-type: x;
-        // cursor: grab;
-        // scroll-behavior: smooth;
+        scroll-behavior: smooth;
+
     }
 }

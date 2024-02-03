@@ -34,10 +34,6 @@
     .product {
         scroll-snap-align: center;
         user-select: none;
-
-        // img {
-        //     user-select: none;
-        // }
     }
 
     @include b.breakpoint-sm {

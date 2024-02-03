@@ -1,24 +1,35 @@
 @use './variables' as v;
+@use './breakpoint' as b;
 
 .contact_wrapper {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+
+    p {
+        text-align: center;
+    }
 }
 
 .contact_container {
     border: 1px v.$TomatoRed solid;
     border-radius: 30px;
-    padding: 40px 80px;
+    padding: 20px;
     display: flex;
+    flex-direction: column;
     gap: 2.5rem;
     margin-block-start: 3rem;
-    // justify-content: center;
-    // align-items: center;
+
+
+    @include b.breakpoint-md {
+        flex-direction: row;
+        padding: 40px 80px;
+    }
 
     img {
-        width: 450px;
+        max-width: 380px;
+        width: 100%;
     }
 
     form {
