@@ -1,0 +1,49 @@
+@use './breakpoint' as b;
+
+.why_wrapper {
+    margin-block-start: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+
+    @include b.breakpoint-sm {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text {
+        flex-basis: 50%;
+    }
+
+    h2 {
+        margin-block-end: 20px;
+    }
+
+    li {
+        position: relative;
+        margin-left: 35px;
+        padding-block-end: 10px;
+        font-size: 20px;
+
+        @include b.breakpoint-sm {
+            font-size: 1rem;
+        }
+    }
+
+    li:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -35px;
+        height: 25px;
+        width: 25px;
+        background-image: url(../Assests/mdi_tick-circle.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    img {
+        width: 100%;
+    }
+}

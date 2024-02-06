@@ -1,0 +1,74 @@
+@use './variables' as v;
+@use './breakpoint' as b;
+
+.contact_wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+        text-align: center;
+    }
+}
+
+.contact_container {
+    border: 1px v.$TomatoRed solid;
+    border-radius: 30px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    margin-block-start: 3rem;
+    overflow-x: hidden;
+
+
+    @include b.breakpoint-md {
+        flex-direction: row;
+        padding: 40px 80px;
+    }
+
+    img {
+        max-width: 450px;
+        width: 100%;
+
+        @include b.breakpoint-md {
+
+        }
+    }
+
+    form {
+        min-width: 300px;
+
+        label {
+            display: block;
+            padding-block: 24px 10px;
+        }
+
+        input, textarea {
+            border-radius: 0.5rem;
+            padding: 16px;
+            outline: none;
+            border: 1px solid rgba(0, 0, 0, 0.13);
+            width: 100%;
+            
+            &:focus-within {
+                border: 1px solid v.$TomatoRed;
+            }
+        }
+
+        textarea {
+            height: 9.375rem;
+            resize: none;
+        }
+
+        button {
+            display: block;
+            background-color: v.$TomatoRed;
+            color: v.$White;
+            padding: 1rem;
+            user-select: none;
+            margin-block-start: 0.625rem;
+        }
+    }
+}
