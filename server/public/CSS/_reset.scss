@@ -1,0 +1,55 @@
+@use './variables' as v;
+@use './breakpoint' as b;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: v.$ff;
+}
+
+body,html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.7;
+    font-size: 1.125rem;
+
+    @include b.breakpoint-bs {
+        font-size: 1rem;
+    }
+}
+
+h2 {
+    color: v.$TomatoRed;
+    font-size: clamp(1.5rem, 1.0982rem + 2.1429vw, 3rem);
+    font-weight: v.$fw-700;
+}
+
+img {
+    display: block;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    max-inline-size: 90rem;
+    padding-inline: 1.25rem;
+    margin-inline: auto;
+}
+
+button {
+    cursor: pointer;
+    border-radius: 8px;
+    border: none;
+}

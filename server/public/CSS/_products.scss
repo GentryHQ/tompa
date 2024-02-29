@@ -1,0 +1,60 @@
+@use './variables' as v;
+@use './breakpoint' as b;
+
+
+
+.products_wrapper {
+    text-align: center;
+    padding-block-start: 80px;
+    
+}
+
+.product_text {
+    max-width: 700px;
+    margin-inline: auto;
+    margin-block-start: 16px;
+}
+
+.products_card {
+    background-color: v.$TomatoRed;
+    border-radius: 5rem;
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    margin-top: 3rem;
+    // max-width: 768px;
+    width: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x;
+    cursor: grab;
+    scroll-behavior: smooth;
+
+    .product {
+        scroll-snap-align: center;
+        user-select: none;
+    }
+
+    @include b.breakpoint-sm {
+        gap: 20px;
+        justify-content: start;
+        padding-inline: 40px;
+    }
+
+    .divider {
+        background-color: v.$White;
+        height: 200px;
+        width: 2px;
+    }
+
+    p {
+        color: v.$White;
+        font-size: 24px;
+        user-select: none;
+
+        @include b.breakpoint-sm {
+            font-size: 20px;
+        }
+    }
+}

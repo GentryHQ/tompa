@@ -1,0 +1,32 @@
+{
+  "name": "tompa",
+  "version": "1.0.0",
+  "description": "Tompa website server backend",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GentryHQ/tompa.git"
+  },
+  "keywords": [
+    "Tompa",
+    "tompa",
+    "dry",
+    "tomato"
+  ],
+  "author": "GentryHQ, Goldeno10",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GentryHQ/tompa/issues"
+  },
+  "homepage": "https://github.com/GentryHQ/tompa#readme",
+  "dependencies": {
+    "dotenv": "^16.4.1",
+    "express": "^4.18.2",
+    "install": "^0.13.0",
+    "nodemailer": "^6.9.9",
+    "npm": "^10.4.0"
+  }
+}

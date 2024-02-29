@@ -1,0 +1,38 @@
+@use './variables' as v;
+@use './breakpoint' as b;
+
+.community_wrapper {
+    margin-block-start: 5rem;
+    text-align: center;
+
+
+
+    .com {
+        margin-block-start: 40px;
+        display: flex;
+        gap: 40px;
+        justify-content: center;
+
+        @include b.breakpoint-sm {
+            flex-direction: column;
+            align-items: center;
+
+            img {
+                max-width: 100%;
+            }
+        }
+
+        @include b.breakpoint-md {
+            img {
+                min-width: 100%;
+                max-width: 400px;
+            }
+        }
+        
+        p {
+            color: v.$TomatoRed;
+            font-weight: v.$fw-700;
+            font-size: 32px;
+        }
+    }
+}

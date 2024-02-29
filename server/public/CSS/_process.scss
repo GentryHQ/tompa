@@ -1,0 +1,62 @@
+@use './variables' as v;
+@use './breakpoint' as b;
+
+.process {
+    padding-block-start: 80px;
+    display: flex;
+    text-align: center;
+
+    h2 {
+        margin-block-end: 0.875rem;
+    }
+
+
+    &_p {
+        max-inline-size: 37.5rem;
+        margin-inline: auto;
+        padding-inline-start: 1.5rem;
+    }
+
+    &_card {
+        display: flex;
+        align-items: center;
+        gap: 64px;
+        text-align: left;
+        max-inline-size: 1044px;
+        margin-block-start: 64px;
+
+        h3 {
+            color: v.$TomatoRed;
+            padding-block-end: 0.875rem;
+            font-size: clamp(1.25rem, 1.786vw + 0.915rem, 2.5rem);
+        }
+
+        @include b.breakpoint-sm {
+            flex-direction: column;
+            text-align: center;
+            gap: 20px;
+
+            img {
+                width: 250px;
+            }
+        }
+    }
+}
+
+.second {
+    @include b.breakpoint-sm {
+        flex-direction: column-reverse;
+    }
+}
+
+.arrow {
+    margin-block: -40px -60px;
+
+    @include b.breakpoint-sm {
+        display: none;
+    }
+
+    img {
+        margin-inline: auto;
+    }
+}
