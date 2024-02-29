@@ -17,37 +17,37 @@ for (let i = 0; i < links.length; i++) {
     })
 };
 
-//Slider
-const wrapper = document.querySelector('.products_card');
+// //Slider
+// const wrapper = document.querySelector('.products_card');
 
-let pressed = false;
-let startX = 0;
+// let pressed = false;
+// let startX = 0;
 
-wrapper.addEventListener('mousedown', function (e) {
-    pressed = true;
-    startX = e.clientX
-    this.style.cursor = 'grabbing'
-})
+// wrapper.addEventListener('mousedown', function (e) {
+//     pressed = true;
+//     startX = e.clientX
+//     this.style.cursor = 'grabbing'
+// })
 
-wrapper.addEventListener('mousedown', function (e) {
-    pressed = true;
-    startX = e.clientX
-    this.style.cursor = 'grabbing'
-})
+// wrapper.addEventListener('mousedown', function (e) {
+//     pressed = true;
+//     startX = e.clientX
+//     this.style.cursor = 'grabbing'
+// })
 
-wrapper.addEventListener('mouseleave', function (e) {
-    pressed = false;
-})
+// wrapper.addEventListener('mouseleave', function (e) {
+//     pressed = false;
+// })
 
-window.addEventListener('mouseup', function (e) {
-    pressed = false;
-    wrapper.style.cursor = 'grab'
-})
+// window.addEventListener('mouseup', function (e) {
+//     pressed = false;
+//     wrapper.style.cursor = 'grab'
+// })
 
-wrapper.addEventListener('mousemove', function (e) {
-    if (!pressed) {
-        return;
-    }
+// wrapper.addEventListener('mousemove', function (e) {
+//     if (!pressed) {
+//         return;
+//     }
 
-    this.scrollleft += startX + e.clientX;
-})
+//     this.scrollleft += startX + e.clientX;
+// })

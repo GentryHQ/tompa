@@ -148,6 +148,10 @@ nav {
     align-items: center;
     text-align: center;
 
+    span {
+      color: v.$Yellow;
+    }
+
     p {
       font-size: 1.25rem;
       max-inline-size: 48.75rem;
