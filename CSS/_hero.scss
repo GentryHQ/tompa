@@ -172,6 +172,7 @@ nav {
   h1 {
     font-weight: v.$fw-800;
     font-size: clamp(1.5rem, 0.8304rem + 3.5714vw, 4rem);
+    letter-spacing: -5px;
   }
 
   .tompa_full {

@@ -3,36 +3,59 @@
 
 .community_wrapper {
     margin-block-start: 5rem;
-    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.875rem;
+    justify-content: center;
+    align-items: center;
 
+    p {
+        margin-block-end: 1.25rem;
+    }
 
+    li {
+        padding-inline-start: 1.25rem;
+        position: relative;
+        color: v.$TomatoRed;
+        font-weight: v.$fw-600;
+        margin-block-start: 0.5rem;
 
-    .com {
-        margin-block-start: 40px;
-        display: flex;
-        gap: 40px;
-        justify-content: center;
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0.3125rem;
+            left: -0.25rem;
+            height: 0.625rem;
+            width: 0.625rem;
+            border-radius: 1.25rem;
+            background-color: v.$TomatoRed;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+
+    .col1 {
+        flex-basis: 45%;
+        img {
+            margin-block-start: 20px;
+        }
+    }
+
+    .col2 {
+        max-width: 40%;
 
         @include b.breakpoint-sm {
-            flex-direction: column;
-            align-items: center;
-
-            img {
-                max-width: 100%;
-            }
+            max-width: 100%;
         }
+    }
+  
 
-        @include b.breakpoint-md {
-            img {
-                min-width: 100%;
-                max-width: 400px;
-            }
-        }
-        
-        p {
-            color: v.$TomatoRed;
-            font-weight: v.$fw-700;
-            font-size: 32px;
+    @include b.breakpoint-sm {
+        flex-direction: column;
+        align-items: flex-start;
+
+        img {
+            max-width: 100%;
         }
     }
 }

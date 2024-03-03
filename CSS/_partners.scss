@@ -4,23 +4,26 @@
 .partners {
     margin-block: 5rem;
     text-align: center;
+    padding-block: 2.5rem;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background-color: v.$DullRed;
+
+    h2 {
+        color: v.$White;
+    }
 
     .partners_wrapper {
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(4, auto);
         align-items: center;
-        // justify-content: center;
+        justify-content: center;
         gap: 2.5rem;
-        box-shadow: 2px 3px 20px 5px rgba(44, 43, 43, 0.06);
-        width: min-content;
-        margin-inline: auto;
         padding: 20px 40px;
-        border-radius: 20px;
         margin-block-start: 32px;
 
-        max-width: 768px;
-        width: 100%;
-        overflow-x: auto;
-        scroll-behavior: smooth;
-
+        @include b.breakpoint-sm {
+            grid-template-columns: 1fr 1fr;
+        }
     }
 }

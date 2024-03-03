@@ -1,7 +1,7 @@
 @use './variables' as v;
 @use './breakpoint' as b;
 
-* {
+*, *::after, *::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -36,6 +36,7 @@ h2 {
 
 img {
     display: block;
+    max-inline-size: 100%;
 }
 
 li {
