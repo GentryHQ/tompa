@@ -18,9 +18,11 @@
     padding: 20px;
     display: flex;
     flex-direction: column;
+
     gap: 2.5rem;
     margin-block-start: 3rem;
-    overflow-x: hidden;
+    align-items: center;
+
 
 
     @include b.breakpoint-md {
@@ -29,12 +31,8 @@
     }
 
     img {
-        max-width: 450px;
         width: 100%;
-
-        @include b.breakpoint-md {
-
-        }
+        aspect-ratio: 1/1;
     }
 
     form {

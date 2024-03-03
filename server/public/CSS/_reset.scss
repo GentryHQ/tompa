@@ -1,7 +1,7 @@
 @use './variables' as v;
 @use './breakpoint' as b;
 
-* {
+*, *::after, *::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -32,10 +32,12 @@ h2 {
     color: v.$TomatoRed;
     font-size: clamp(1.5rem, 1.0982rem + 2.1429vw, 3rem);
     font-weight: v.$fw-700;
+    letter-spacing: -3px;
 }
 
 img {
     display: block;
+    max-inline-size: 100%;
 }
 
 li {
