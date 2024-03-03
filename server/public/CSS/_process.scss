@@ -2,7 +2,7 @@
 @use './breakpoint' as b;
 
 .process {
-    padding-block-start: 80px;
+    padding-block: 5rem;
     display: flex;
     text-align: center;
 
@@ -17,46 +17,47 @@
         padding-inline-start: 1.5rem;
     }
 
+    &_wrapper-card {
+        display: grid;
+        // grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+        margin-block-start: 64px;
+        gap: 20px;
+    }
+    
+
     &_card {
         display: flex;
-        align-items: center;
-        gap: 64px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
         text-align: left;
-        max-inline-size: 1044px;
-        margin-block-start: 64px;
+        border: 2px solid v.$DullRed;
+        padding: 1.25rem;
+        border-radius: 1rem;
 
         h3 {
             color: v.$TomatoRed;
-            padding-block-end: 0.875rem;
-            font-size: clamp(1.25rem, 1.786vw + 0.915rem, 2.5rem);
+            // padding-block-end: 0.875rem;
+            font-size: clamp(1rem, 0.7594rem + 1.1321vw, 1.75rem);
+        }
+
+        img {
+            width: 120px;
         }
 
         @include b.breakpoint-sm {
-            flex-direction: column;
+            align-items: center;
             text-align: center;
-            gap: 20px;
-
-            img {
-                width: 250px;
-            }
         }
     }
 }
 
 .second {
-    @include b.breakpoint-sm {
-        flex-direction: column-reverse;
-    }
-}
+    background-color: v.$TomatoRed;
+    color: v.$White;
 
-.arrow {
-    margin-block: -40px -60px;
-
-    @include b.breakpoint-sm {
-        display: none;
-    }
-
-    img {
-        margin-inline: auto;
+    h3 {
+        color: v.$White;
     }
 }

@@ -1,13 +1,76 @@
 @use './variables' as v;
 @use './breakpoint' as b;
 
+.products {
+    background-color: v.$TomatoBg;
+    margin-block-start: 5rem;
+    color: v.$White;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
 
+    &_wrapper {
+        text-align: center;
+        padding-block-start: 5rem; 
+    }
 
-.products_wrapper {
-    text-align: center;
-    padding-block-start: 80px;
+    h2 {
+        color: v.$White;
+    }
+
+    &_card {
+        padding-block: 80px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1.875rem;
+
+        @include b.breakpoint-sm {
+            gap: 20px;
+            // justify-content: start;
+            flex-direction: column;
+            // flex-wrap: wrap;
+            padding-inline: 40px;
+        }
+    }
+
+    .product {
+        background-color: v.$White;
+        padding: 50px;
+        border-radius: 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-inline-size: 400px;
+
+        @include b.breakpoint-sm {
+            max-inline-size: unset;
+        }
+
+        p {
+            color: v.$Black;
+        }
+
+        h5 {
+            color: v.$TomatoRed;
+            font-size: 24px;
+            margin-block: 0.875rem;
     
+            @include b.breakpoint-sm {
+                font-size: 20px;
+            }
+        }
+
+        &.second {
+            background-color: v.$TomatoRed;
+
+            h5, p  {
+                color: v.$White;
+
+            }
+        }
+    }
 }
+
 
 .product_text {
     max-width: 700px;
@@ -15,46 +78,16 @@
     margin-block-start: 16px;
 }
 
-.products_card {
-    background-color: v.$TomatoRed;
-    border-radius: 5rem;
-    padding: 80px 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 100px;
-    margin-top: 3rem;
-    // max-width: 768px;
-    width: 100%;
-    overflow-x: auto;
-    scroll-snap-type: x;
-    cursor: grab;
-    scroll-behavior: smooth;
+// .products_card {
+    // padding: 80px 0px;
+    // display: flex;
+    // justify-content: center;
+//     align-items: center;
+//     gap: 30px;
+//     // margin-top: 3rem;
+    
 
-    .product {
-        scroll-snap-align: center;
-        user-select: none;
-    }
 
-    @include b.breakpoint-sm {
-        gap: 20px;
-        justify-content: start;
-        padding-inline: 40px;
-    }
 
-    .divider {
-        background-color: v.$White;
-        height: 200px;
-        width: 2px;
-    }
 
-    p {
-        color: v.$White;
-        font-size: 24px;
-        user-select: none;
-
-        @include b.breakpoint-sm {
-            font-size: 20px;
-        }
-    }
-}
+// }
